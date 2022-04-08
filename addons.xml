@@ -92,6 +92,65 @@
   </extension>
 </addon>
     
+<addon id="script.module.zkte.m3u8" name="m3u8" version="0.8.0+matrix.1" provider-name="Globo.com">
+  <requires>
+    <import addon="xbmc.python" version="3.0.0"/>
+    <import addon="script.module.zkte.iso8601" version="0.1.14+matrix.1"/>
+  </requires>
+  <extension point="xbmc.python.module" library="lib" />
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en_GB">Python m3u8 parser</summary>
+    <description lang="en_GB">Python m3u8 parser</description>
+    <license>MIT</license>
+    <platform>all</platform>
+    <website>https://github.com/globocom/m3u8</website>
+    <source>https://github.com/globocom/m3u8</source>
+    <assets>
+      <icon>resources/icon.png</icon>
+    </assets>
+  </extension>
+</addon>
+<addon id="script.module.zkte.iso8601" name="iso8601" version="0.1.14+matrix.1" provider-name="Michael Twomey">
+  <requires>
+    <import addon="xbmc.python" version="3.0.0"/>
+  </requires>
+  <extension point="xbmc.python.module" library="lib" />
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en_GB">Simple module to parse ISO 8601 dates</summary>
+    <description lang="en_GB">This module parses the most common forms of ISO 8601 date strings (e.g. 2007-01-14T20:34:22+00:00) into datetime objects.</description>
+    <license>MIT</license>
+    <platform>all</platform>
+    <website>https://github.com/micktwomey/pyiso8601</website>
+    <source>https://github.com/micktwomey/pyiso8601</source>
+    <assets>
+      <icon>resources/icon.png</icon>
+    </assets>
+  </extension>
+</addon>
+<addon id="plugin.video.toolazy" name="Too Lazy" version="0.0.7" provider-name="zkte">
+  <requires>
+    <import addon="xbmc.python" version="3.0.0"/>
+    <import addon="script.module.routing" version="0.2.3+matrix.1"/>
+    <import addon="script.module.requests" version="2.25.1+matrix.1"/>
+    <import addon="script.module.dateutil" version="2.8.1+matrix.1"/>
+    <import addon="script.module.zkte.m3u8" version="0.8.0+matrix.1"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="addon.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.service" library="resources/service/toolazy_proxy.py" start="[login|startup]" />
+  <extension point="xbmc.addon.metadata">
+    <reuselanguageinvoker>true</reuselanguageinvoker>
+    <summary lang="en_gb">Too Lazy</summary>
+    <description lang="en_gb">Too Lazy</description>
+    <platform>all</platform>
+    <license>GPL-3.0-only</license>
+    <assets>
+      <icon>icon.png</icon>
+    </assets>
+  </extension>
+</addon>
+    
 <addon id="plugin.video.torquelite" name="[COLORlime]Torque Lite[/COLOR]" version="4.1" provider-name="RacesonDemand">
   <requires>
     <import addon="xbmc.python" version="3.0.0" />
