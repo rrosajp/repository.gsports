@@ -123,7 +123,7 @@
     <website>https://github.com/micktwomey/pyiso8601</website>
     <source>https://github.com/micktwomey/pyiso8601</source>
     <assets>
-      <icon>resources/icon.png</icon>
+      <icon>icon.png</icon>
     </assets>
   </extension>
 </addon>
