@@ -127,13 +127,14 @@
     </assets>
   </extension>
 </addon>
-<addon id="plugin.video.toolazy" name="Too Lazy" version="0.0.7" provider-name="zkte">
+    
+<addon id="plugin.video.toolazy" name="Too Lazy" version="0.0.8" provider-name="zkte">
   <requires>
     <import addon="xbmc.python" version="3.0.0"/>
     <import addon="script.module.routing" version="0.2.3+matrix.1"/>
-    <import addon="script.module.requests" version="2.25.1+matrix.1"/>
+    <import addon="script.module.requests" version="2.27.1+matrix.1"/>
     <import addon="script.module.dateutil" version="2.8.1+matrix.1"/>
-    <import addon="script.module.zkte.m3u8" version="0.8.0+matrix.1"/>
+    <import addon="script.module.zkte.m3u8" version="2.0.0"/>
   </requires>
   <extension point="xbmc.python.pluginsource" library="addon.py">
     <provides>video</provides>
@@ -146,7 +147,7 @@
     <platform>all</platform>
     <license>GPL-3.0-only</license>
     <assets>
-      <icon>icon.png</icon>
+      <icon>resources/icon.png</icon>
     </assets>
   </extension>
 </addon>
