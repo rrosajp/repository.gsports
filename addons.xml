@@ -147,7 +147,7 @@
     <platform>all</platform>
     <license>GPL-3.0-only</license>
     <assets>
-      <icon>resources/icon.png</icon>
+      <icon>icon.png</icon>
     </assets>
   </extension>
 </addon>
