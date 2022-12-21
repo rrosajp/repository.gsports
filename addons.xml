@@ -170,8 +170,28 @@
         - fixed vipleague</news>
     </extension>
 </addon>
+    
+<addon id="script.module.js2py" name="js2py" version="3.0.0" provider-name="Addons4Kodi">
+  <requires>
+    <import addon="script.module.six" version="1.15.0"/>
+    <import addon="script.module.pyjsparser" version="3.0.0"/>
+    <import addon="script.module.tzlocal" version="2.0.0"/>
+  </requires>
+  <extension point="xbmc.python.module" library="lib" />
+  <extension point="xbmc.addon.metadata">
+    <summary>Pure Python JavaScript Translator/Interpreter</summary>
+    <description>Packed for Kodi from https://github.com/PiotrDabkowski/Js2Py</description>
+    <platform>all</platform>
+    <language></language>
+    <license>MIT</license>
+    <forum></forum>
+    <website>https://github.com/PiotrDabkowski/Js2Py</website>
+    <source>https://github.com/PiotrDabkowski/Js2Py</source>
+    <email></email>
+  </extension>
+</addon>
 
-<addon id="plugin.video.wrestlingwatch" name="Wrestlingwatch_cam" version="0.5" provider-name="mbebe">
+<addon id="plugin.video.prowrestling" name="Watch Pro Wrestling" version="1.0.0" provider-name="G-Man">
     <requires>
         <import addon="script.module.requests" />
         <import addon="script.module.six"/>
@@ -181,13 +201,13 @@
         <provides>video</provides>
     </extension>
     <extension point="xbmc.addon.metadata">
-        <description lang="en">Wrestlingwatch_cam</description>
-        <disclaimer lang="en">https://github.com/mbebe/blomqvist</disclaimer>	
-        <summary lang="en">Wrestlingwatch_cam</summary>
+        <description lang="en">Includes Wrestling, MMA and Boxing via the website: watchprowrestling.org[CR]Original coding by mbebe. This fork only has a very minor edit in coding from the original, which had a broken link, as well as a new icon. I take no credit for how it works.[CR]Any issues with this add-on will be due to maintenance on the source website.</description>
+        <disclaimer lang="en"></disclaimer>	
+        <summary lang="en">Watchprowrestling.org</summary>
         <language>en</language>
         <platform>all</platform>
         <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
-        <website>https://github.com/mbebe/blomqvist</website>
+        <website></website>
         <assets>
             <icon>icon.png</icon>
             <fanart>fanart.jpg</fanart>
