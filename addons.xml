@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addons>
 
-<addon id="repository.gsports" name="[COLOR yellow]G-Sports+ Repository[/COLOR]" version="1.1.0" provider-name="G-Man">
+<addon id="repository.gsports" name="[COLOR yellow]G-Sports+ Repository[/COLOR]" version="1.1.1" provider-name="G-Man">
 <extension point="xbmc.addon.repository" name="G-Sport Repository">
     <dir>
         <info compressed="false">https://github.com/mrgsi/repository.gsports/raw/master/addons.xml</info>
@@ -29,8 +29,8 @@
     </dir>
 </extension>
 <extension point="xbmc.addon.metadata">
-	<summary>Kodi Matrix Sports Add-ons</summary>
-    <description>A collection of Add-ons and Repos for On-Demand Sports and Live Sports.</description>
+	<summary>Kodi Sports and IPTV Add-ons</summary>
+    <description>A collection of Good Add-ons and Repos for On-Demand Sports and Live Sports.[CR]Works for Kodi 19/20</description>
     <platform>all</platform>
     <assets>
         <icon>icon.png</icon>
