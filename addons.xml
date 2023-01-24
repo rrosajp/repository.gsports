@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addons>
 
-<addon id="repository.gsports" name="[COLOR yellow]G-Sports+ Repository[/COLOR]" version="1.1.1" provider-name="G-Man">
+<addon id="repository.gsports" name="[COLOR yellow]G-Sports+ Repository[/COLOR]" version="1.2.0" provider-name="G-Man">
 <extension point="xbmc.addon.repository" name="G-Sport Repository">
     <dir>
         <info compressed="false">https://github.com/mrgsi/repository.gsports/raw/master/addons.xml</info>
@@ -12,11 +12,6 @@
         <info compressed="false">https://raw.githubusercontent.com/mrgsi/repository.glive/master/addons.xml</info>   <checksum>https://raw.githubusercontent.com/mrgsi/repository.glive/master/addons.xml.md5</checksum>
         <datadir zip="true">https://raw.githubusercontent.com/mrgsi/repository.glive/master/</datadir>
     </dir>   
-    <dir>
-		<info compressed="false">https://loopaddon.uk/zips19/addons.xml</info>
-	    <checksum>https://loopaddon.uk/zips19/addons.xml.md5</checksum>
-		<datadir zip="true">https://loopaddon.uk/zips19/</datadir>
-    </dir>
     <dir>
 		<info compressed="false">https://mullafabz.xyz/Plugins/K19/Plugins/addons.xml</info>
 		<checksum>https://mullafabz.xyz/Plugins/K19/Plugins/addons.xml.md5</checksum>
@@ -36,6 +31,30 @@
         <icon>icon.png</icon>
     </assets>
 </extension>
+</addon>
+    
+<addon id="repository.loop" name="[COLORlime]Loop[/COLOR] Repository" version="3.0.2" provider-name="The Loop">
+	<extension point="xbmc.addon.repository" name="Loop Repository">
+		<dir>
+			<info compressed="false">https://loopaddon.uk/zips19/addons.xml</info>
+	<checksum>https://loopaddon.uk/zips19/addons.xml.md5</checksum>
+			<datadir zip="true">https://loopaddon.uk/zips19/</datadir>
+		</dir>
+		<dir>
+      <info compressed="false">https://raw.githubusercontent.com/Gujal00/smrzips/master/addons.xml</info>
+      <checksum>https://raw.githubusercontent.com/Gujal00/smrzips/master/addons.xml.md5</checksum>
+      <datadir zip="true">https://raw.githubusercontent.com/Gujal00/smrzips/master/zips/</datadir>
+    </dir>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+    <assets>
+        <icon>icon.png</icon>
+        <fanart>fanart.jpg</fanart>			
+    </assets>
+		<summary lang="en"></summary>
+		<description lang="en"></description>
+		<genre></genre>
+	</extension>
 </addon>
     
 <addon id="plugin.video.fod" name="Fights on Demand" version="1.0.0" provider-name="Z3R0">
