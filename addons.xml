@@ -260,7 +260,7 @@
     </extension>
 </addon>
     
-<addon id="plugin.video.daddylive" name="Daddylive" version="2.1" provider-name="mbebe">
+<addon id="plugin.video.daddylive" name="Daddylive" version="2.1a" provider-name="mbebe">
     <requires>
         <import addon="xbmc.python" version="3.0.0"/>
         <import addon="script.module.requests" />
@@ -287,7 +287,6 @@
             <fanart>fanart.jpg</fanart>
         </assets>
     </extension>
-    
 </addon>
     
 </addons>
