@@ -134,7 +134,7 @@
     </extension>
 </addon>
     
-<addon id="plugin.video.torquelite" name="[COLORlime]Torque Lite[/COLOR]" version="7.7" provider-name="RacesonDemand">
+<addon id="plugin.video.torquelite" name="[COLORlime]Torque Lite[/COLOR]" version="7.8" provider-name="RacesonDemand">
   <requires>
     <import addon="xbmc.python" version="3.0.0" />
     <import addon="script.module.requests" />
