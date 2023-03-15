@@ -134,14 +134,20 @@
     </extension>
 </addon>
     
-<addon id="plugin.video.torquelite" name="[COLORlime]Torque Lite[/COLOR]" version="5.1" provider-name="RacesonDemand">
+<addon id="plugin.video.torquelite" name="[COLORlime]Torque Lite[/COLOR]" version="7.7" provider-name="RacesonDemand">
   <requires>
     <import addon="xbmc.python" version="3.0.0" />
     <import addon="script.module.requests" />
     <import addon="script.module.routing"/>
     <import addon="script.module.unidecode" />
+	<import addon="script.module.microjenscrapers" />
+    <import addon="script.module.tzlocal" />
+    <import addon="script.module.jetextractors" />
     <import addon="script.module.inputstreamhelper" />
     <import addon="script.module.resolveurl"/>
+    <import addon="script.module.pyamf" />
+    <import addon="script.module.pycryptodome" optional="true" />
+    <import addon="script.module.microjenscrapers" optional="true" />
   </requires>
   <extension point="xbmc.python.pluginsource" library="default.py">
     <provides>video</provides>
