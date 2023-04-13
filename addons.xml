@@ -134,7 +134,7 @@
     </extension>
 </addon>
     
-<addon id="plugin.video.torquelite" name="[COLORlime]Torque Lite[/COLOR]" version="8.0" provider-name="RacesonDemand">
+<addon id="plugin.video.torquelite" name="[COLORlime]Torque Lite[/COLOR]" version="8.3" provider-name="RacesonDemand">
   <requires>
     <import addon="xbmc.python" version="3.0.0" />
     <import addon="script.module.requests" />
@@ -162,6 +162,31 @@
 		<fanart>fanart.jpg</fanart>
   </assets>
   </extension>
+</addon>
+    
+<addon id="script.module.jetextractors" name="JetExtractors" version="2.0.74" provider-name="THE TEAM">
+	<requires>
+		<import addon="script.module.requests" />
+		<import addon="script.module.beautifulsoup4" />
+		<import addon="script.module.dateutil" />
+		<import addon="script.module.soupsieve" />
+		<import addon="script.module.pyairtable" />
+		<import addon="script.module.pyamf" />
+		<import addon="script.module.pycryptodome" optional="true" />
+		<import addon="script.module.pyjsparser" />
+	</requires>
+	<extension point="xbmc.python.module" library="lib" />
+	<extension point="xbmc.addon.metadata">
+		<platform>all</platform>
+		<summary lang="en">Jet Extractors</summary>
+		<description lang="en">Jet Extractors</description>
+		<disclaimer lang="en"></disclaimer>
+		<license>MIT</license>
+		<assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+		</assets>
+	</extension>
 </addon>
     
 <addon id="plugin.video.sportliveevents" name="Sport LIVE" version="1.10" provider-name="mbebe">
