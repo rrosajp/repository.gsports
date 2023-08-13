@@ -22,8 +22,7 @@
         <checksum>http://racingondemand.xyz/_repo/addons.xml.md5</checksum>
         <datadir zip="true">http://racingondemand.xyz/_repo/</datadir>
         <hashes>false</hashes>
-		</dir>
-	<dir>
+	</dir>
 	<dir>
 		<info compressed="false">https://raw.githubusercontent.com/Gujal00/smrzips/master/addons.xml</info>
 		<checksum>https://raw.githubusercontent.com/Gujal00/smrzips/master/addons.xml.md5</checksum>
