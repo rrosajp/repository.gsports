@@ -177,31 +177,6 @@
   </extension>
 </addon>
     
-<addon id="script.module.jetextractors" name="JetExtractors" version="2.0.80" provider-name="THE TEAM">
-	<requires>
-		<import addon="script.module.requests" />
-		<import addon="script.module.beautifulsoup4" />
-		<import addon="script.module.dateutil" />
-		<import addon="script.module.soupsieve" />
-		<import addon="script.module.pyairtable" />
-		<import addon="script.module.pyamf" />
-		<import addon="script.module.pycryptodome" optional="true" />
-		<import addon="script.module.pyjsparser" />
-	</requires>
-	<extension point="xbmc.python.module" library="lib" />
-	<extension point="xbmc.addon.metadata">
-		<platform>all</platform>
-		<summary lang="en">Jet Extractors</summary>
-		<description lang="en">Jet Extractors</description>
-		<disclaimer lang="en"></disclaimer>
-		<license>MIT</license>
-		<assets>
-            <icon>icon.png</icon>
-            <fanart>fanart.jpg</fanart>
-		</assets>
-	</extension>
-</addon>
-    
 <addon id="script.module.js2py" name="js2py" version="3.0.0" provider-name="Addons4Kodi">
   <requires>
     <import addon="script.module.six" version="1.15.0"/>
