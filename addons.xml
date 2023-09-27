@@ -223,7 +223,7 @@
     </extension>
 </addon>
 
-<addon id="plugin.video.wrestlingwatch" name="Wrestlingwatch_cam" version="0.8" provider-name="mbebe">
+<addon id="plugin.video.watchwrestling" name="Watch Wrestling" version="1.8.0" provider-name="G-Man">
     <requires>
         <import addon="xbmc.python" version="3.0.0" />
         <import addon="script.module.requests" />
@@ -234,18 +234,42 @@
         <provides>video</provides>
     </extension>
     <extension point="xbmc.addon.metadata">
-        <description lang="en">Wrestlingwatch_cam</description>
-        <disclaimer lang="en">https://github.com/mbebe/blomqvist</disclaimer>	
-        <summary lang="en">Wrestlingwatch_cam</summary>
+        <description lang="en">Watch Wrestling from WWE to UFC[CR]All coding by mbebe, small mods by G-Man</description>
+        <disclaimer lang="en">https://watchwrestling.ae/</disclaimer>	
+        <summary lang="en">WWE and MMA Wrestling</summary>
         <language>en</language>
         <platform>all</platform>
         <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
-        <website>https://github.com/mbebe/blomqvist</website>
+        <website></website>
         <assets>
             <icon>icon.png</icon>
             <fanart>fanart.jpg</fanart>
         </assets>
     </extension>
+</addon>
+    
+<addon id="plugin.video.wod" name="WOD" version="0.4" provider-name="">
+  <requires>
+    <import addon="xbmc.python" version="3.0.0" />
+    <import addon="script.module.requests" />
+    <import addon="script.module.routing"/>
+    <import addon="script.module.unidecode" />
+    <import addon="script.module.inputstreamhelper" />
+    <import addon="script.module.resolveurl"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en_GB">WOD KODI 19</summary>
+    <platform>all</platform>
+    <language>en</language>
+    <license>GPL-2.0-or-later</license>
+	<assets>
+		<icon>icon.png</icon>
+		<fanart>fanart.jpg</fanart>
+  </assets>
+  </extension>
 </addon>
     
 </addons>
