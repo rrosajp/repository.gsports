@@ -266,7 +266,7 @@
     <provides>video</provides>
   </extension>
   <extension point="xbmc.addon.metadata">
-    <summary lang="en_GB">WOD KODI 19</summary>
+    <summary lang="en_GB">Wrestling On Demand</summary>
     <platform>all</platform>
     <language>en</language>
     <license>GPL-2.0-or-later</license>
