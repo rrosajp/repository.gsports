@@ -42,7 +42,7 @@ class _BaseStringArrayParam(_BaseParam):
     """
 
     def to_param_dict(self):
-        encoded_param = self.param_name + '[]'
+        encoded_param = f'{self.param_name}[]'
         return {encoded_param: self.value}
 
 
@@ -315,12 +315,11 @@ class AirtableParams():
             for item in value:
                 if not hasattr(item, 'startswith'):
                     field_name, direction = item
+                elif item.startswith('-'):
+                    direction = 'desc'
+                    field_name = item[1:]
                 else:
-                    if item.startswith('-'):
-                        direction = 'desc'
-                        field_name = item[1:]
-                    else:
-                        field_name = item
+                    field_name = item
 
                 sort_param = {'field': field_name, 'direction': direction}
                 self.value.append(sort_param)
@@ -352,6 +351,6 @@ class AirtableParams():
         try:
             param_class = param_classes[kwarg_name]
         except KeyError:
-            raise ValueError('invalid param keyword {}'.format(kwarg_name))
+            raise ValueError(f'invalid param keyword {kwarg_name}')
         else:
             return param_class

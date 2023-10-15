@@ -65,11 +65,9 @@ def get_plugins() -> List[Plugin]:
     klasses = Plugin.subclasses
     plugins = []
     for klass in klasses:
-        if klass in plugin_cache:
-            plugins.append(plugin_cache[klass])
-        else:
+        if klass not in plugin_cache:
             plugin_cache[klass] = klass()
-            plugins.append(plugin_cache[klass])
+        plugins.append(plugin_cache[klass])
     return plugins
 
 def register_routes(plugin_route):
@@ -84,12 +82,8 @@ def run_hook(*args: Tuple[str, ...], return_item_on_failure=False) -> Any:
     other_args = args[1:]
     plugins = sorted(plugins, key=lambda plugin: plugin.priority, reverse=True)
     for plugin in plugins:
-        result = getattr(plugin, function_name)(*other_args)
-        if result:
+        if result := getattr(plugin, function_name)(*other_args):
             return result
     if return_item_on_failure:
-        if len(other_args) == 1:
-            return other_args[0]
-        else:
-            return other_args
+        return other_args[0] if len(other_args) == 1 else other_args
     return False

@@ -47,24 +47,20 @@ class TMDB_API:
     def get_collection(self, list_id: int):
         response = self.session.get(f"{self.base_url}/3/collection/{list_id}?api_key={self.api_key}", headers = self.headers)
         tmdb_list = response.json()
-        results = tmdb_list["parts"]            
-        return results
+        return tmdb_list["parts"]
 
     def get_keyword(self, list_id: int):
         response = self.session.get(f"{self.base_url}/3/keyword/{list_id}/movies?api_key={self.api_key}", headers = self.headers)
         tmdb_list = response.json()
-        results = tmdb_list["results"]
-        return results
+        return tmdb_list["results"]
 
     def get_show(self, show_id:int):
         response = self.session.get(f"{self.base_url}/3/tv/{show_id}?api_key={self.api_key}", headers = self.headers)
-        tmdb_show = response.json()     
-        return tmdb_show   
+        return response.json()   
 
     def get_season(self, show_id:int, season:int):
         response = self.session.get(f"{self.base_url}/3/tv/{show_id}/season/{season}?api_key={self.api_key}", headers = self.headers)
-        tmdb_season = response.json()     
-        return tmdb_season   
+        return response.json()   
 
     def process_items(self, items):
         items = [self.handle_item(item) for item in items]

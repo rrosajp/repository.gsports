@@ -129,9 +129,9 @@ class Airtable():
         if response.ok:
             return True
         elif response.status_code == 404:
-            raise ValueError('Invalid base or table name: {}'.format(url))
+            raise ValueError(f'Invalid base or table name: {url}')
         else:
-            raise ValueError('Authentication failed: {}'.format(response.reason))
+            raise ValueError(f'Authentication failed: {response.reason}')
 
     def _process_params(self, params):
         """
@@ -345,8 +345,7 @@ class Airtable():
         records = []
         formula = self.formula_from_name_and_value(field_name, field_value)
         options['formula'] = formula
-        records = self.get_all(**options)
-        return records
+        return self.get_all(**options)
 
     def insert(self, fields):
         """
@@ -578,11 +577,9 @@ class Airtable():
     def formula_from_name_and_value(field_name, field_value):
         """ Creates a formula to match cells from from field_name and value """
         if isinstance(field_value, str):
-            field_value = "'{}'".format(field_value)
+            field_value = f"'{field_value}'"
 
-        formula = "{{{name}}}={value}".format(name=field_name,
-                                              value=field_value)
-        return formula
+        return "{{{name}}}={value}".format(name=field_name, value=field_value)
 
     def __repr__(self):
-        return '<Airtable table:{}>'.format(self.table_name)
+        return f'<Airtable table:{self.table_name}>'
