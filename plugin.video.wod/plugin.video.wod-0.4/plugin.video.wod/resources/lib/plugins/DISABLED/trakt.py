@@ -35,18 +35,15 @@ class TRAKT_API:
 
     def get_list(self, list_id):
         response = self.session.get(f"{self.base_url}/lists/{list_id}/items?extended=full", headers = self.headers)
-        trakt_list = response.json()
-        return trakt_list
+        return response.json()
 
     def get_show(self, show_id:int):
-        response = self.session.get(f"{self.base_url}/shows/{show_id}/seasons", headers = self.headers)    
-        trakt_show = response.json()     
-        return trakt_show
+        response = self.session.get(f"{self.base_url}/shows/{show_id}/seasons", headers = self.headers)
+        return response.json()
 
     def get_season(self, show_id:int, season:int):
         response = self.session.get(f"{self.base_url}/shows/{show_id}/seasons/{season}?extended=full", headers = self.headers)
-        trakt_season = response.json()        
-        return trakt_season
+        return response.json()
 
     def process_items(self, items):
         items = [self.handle_item(item) for item in items]

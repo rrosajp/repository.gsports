@@ -11,8 +11,7 @@ class tmdbhelper(Plugin):
 
     def play_video(self, item):
         item = json.loads(item)
-        tmdb_id = item.get("tmdb_id")
-        if tmdb_id:
+        if tmdb_id := item.get("tmdb_id"):
             content = item.get("content")
             if content == "movie":
                 xbmc.executebuiltin(

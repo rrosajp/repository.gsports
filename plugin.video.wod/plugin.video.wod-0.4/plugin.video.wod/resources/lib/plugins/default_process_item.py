@@ -20,7 +20,7 @@ class default_process_item(Plugin):
     priority = 0
 
     def process_item(self, item):
-        do_log(f'{self.name} - Item = \n {str(item)} ' )  
+        do_log(f'{self.name} - Item = \n {str(item)} ' )
         is_dir = False
         tag = item["type"]
         link = item.get("link", "")
@@ -31,31 +31,31 @@ class default_process_item(Plugin):
             if tag == "dir":
                 link = f"/get_list/{link}"
                 is_dir = True
-                
-            if tag == "plugin":   
-                plug_item = urllib.parse.quote_plus(str(link))  
+
+            elif tag == "plugin":
+                plug_item = urllib.parse.quote_plus(str(link))
                 if 'youtube' in plug_item:
                     link = f"/get_list/{link}"
                     is_dir = True
                 else :
                     link = f"/run_plug/{plug_item}"                 
                     is_dir = False
-                
+
         if tag == "item":
             link_item = base64.urlsafe_b64encode(bytes(json.dumps(item), 'utf-8')).decode("utf-8")
-            
+
             if str(link).lower() == 'settings' :
                 link = f"settings/{link}"        
-            
+
             elif str(link).lower().startswith("message/") :   
                 link = f"show_message/{link}" 
-                               
+
             else :     
                 link = f"play_video/{link_item}"
-                        
+
         # thumbnail = item.get("thumbnail", "")
         # fanart = item.get("fanart", "")
-                        
+
         thumbnail = item.get("thumbnail", default_icon)
         fanart = item.get("fanart", default_fanart)
         list_item = xbmcgui.ListItem(

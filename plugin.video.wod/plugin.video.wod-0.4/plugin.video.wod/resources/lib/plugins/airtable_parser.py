@@ -16,24 +16,29 @@ class airtable_parser(Plugin):
     priority = 100
 
     def process_item(self, item):
-        if "airtable" in item :
-            table_info = item["airtable"]
-            thumbnail = item.get("thumbnail", addon_icon)
-            fanart = item.get("fanart", addon_fanart)
-            list_item = xbmcgui.ListItem(
-                item.get("title", item.get("name", "")), offscreen=True
-            )
-            list_item.setArt({"thumb": thumbnail, "fanart": fanart})
-            item["list_item"] = list_item
-            item["is_dir"] = True
-            
+        if "airtable" not in item:
+            return
+        table_info = item["airtable"]
+        thumbnail = item.get("thumbnail", addon_icon)
+        fanart = item.get("fanart", addon_fanart)
+        list_item = xbmcgui.ListItem(
+            item.get("title", item.get("name", "")), offscreen=True
+        )
+        list_item.setArt({"thumb": thumbnail, "fanart": fanart})
+        item["list_item"] = list_item
+        item["is_dir"] = True
+
             # if table_info.startswith("season") or table_info.startswith("show"): item["link"] = "airtable/jen/%s***%s" % (table_info, workspace_api_key)
             # else: item["link"] = "airtable/jen/all|%s|%s|all***%s" % (table_name, table_id, workspace_api_key)
             
-            if table_info.startswith("season") or table_info.startswith("show"): item["link"] = "airtable/jen/%s***%s" % (table_info, workspace_api_key)
-            else: item["link"] = "airtable/jen/all|%s|%s|all***%s" % (table_info.split('|')[0], table_info.split('|')[-1], workspace_api_key)
-                        
-            return item
+        if table_info.startswith("season") or table_info.startswith("show"):
+            item["link"] = f"airtable/jen/{table_info}***{workspace_api_key}"
+        else:    else
+            item[
+                "link"
+            ] = f"airtable/jen/all|{table_info.split('|')[0]}|{table_info.split('|')[-1]}|all***{workspace_api_key}"
+
+        return item
 
 
 

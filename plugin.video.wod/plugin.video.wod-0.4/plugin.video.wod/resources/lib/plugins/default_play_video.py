@@ -14,17 +14,16 @@ class default_play_video(Plugin):
 
     def play_video(self, item):
         item = json.loads(item)
-        link = item["link"]        
+        link = item["link"]
         title = item["title"]
         thumbnail = item.get("thumbnail", default_icon)
         liz = xbmcgui.ListItem(title)
         liz.setInfo('video', {'Title': title})
         liz.setArt({'thumb': thumbnail, 'icon': thumbnail})
-        
-        if resolveurl.HostedMediaFile(link).valid_url():
-        	url = resolveurl.HostedMediaFile(link).resolve()
-        	return xbmc.Player().play(url,liz)
-        else:
-        	return xbmc.Player().play(link,liz)
+
+        if not resolveurl.HostedMediaFile(link).valid_url():
+            return xbmc.Player().play(link,liz)
+        url = resolveurl.HostedMediaFile(link).resolve()
+        return xbmc.Player().play(url,liz)
        
        

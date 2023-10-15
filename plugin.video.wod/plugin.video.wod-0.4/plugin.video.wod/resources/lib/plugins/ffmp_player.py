@@ -14,7 +14,7 @@ addon_id = xbmcaddon.Addon().getAddonInfo('id')
 default_icon = xbmcaddon.Addon(addon_id).getAddonInfo('icon')
 default_fanart = xbmcaddon.Addon(addon_id).getAddonInfo('fanart')
 USER_AGENT = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.141 Safari/537.36 OPR/73.0.3856.344'
-iStream_Agent = 'user-agent=' + USER_AGENT
+iStream_Agent = f'user-agent={USER_AGENT}'
 
 
 class mpd_play_video(Plugin):
@@ -29,24 +29,25 @@ class mpd_play_video(Plugin):
         liz = xbmcgui.ListItem(title)
         liz.setInfo('video', {'Title': title})
         liz.setArt({'thumb': thumbnail, 'icon': thumbnail})   
-        
+
         mpd_url = '' 
-                                       
-        if  'X-forwarded-for' in link :
+
+        if 'X-forwarded-for' in link:
             xf_url = link.split("|X-forwarded-for=")
             # link = xf_url[0]
             header_url = xf_url[-1]
-            if not header_url. startswith('http'): header_url = 'http://' + header_url
-            
-        else :
+            if not header_url. startswith('http'):
+                header_url = f'http://{header_url}'
+
+        else:
             header_url = link.replace(
                                 "is_hls://", "").replace(
                                 "is_msready://", "").replace(
                                 "is_mpd://", "")
- 
+
         headers = {'User-Agent': USER_AGENT ,
                                'Referer': header_url }         
-        
+
         if link :                                            
             if link.startswith("is_ffmpeg://"):
                 mpd_url = link.replace("is_ffmpeg://", "")               
@@ -56,12 +57,12 @@ class mpd_play_video(Plugin):
                 liz.setProperty('inputstream.ffmpegdirect.manifest_type', 'hls')                  
                 liz.setProperty('inputstream.ffmpegdirect.stream_headers', str(headers) )   
                 liz.setMimeType('application/x-mpegURL')      
-            
+
             if mpd_url :         
                 xbmcplugin.setResolvedUrl(int(sys.argv[1]), True, liz)
                 xbmc.Player().play(mpd_url, liz)   
                 return True
-    
+
         else:
         	return False 
         
