@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addons>
 
-<addon id="repository.gsports" name="[COLOR yellow]G-Sports+ Repository[/COLOR]" version="1.3.3" provider-name="G-Man">
+<addon id="repository.gsports" name="[COLOR yellow]G-Sports+ Repository[/COLOR]" version="1.4.0" provider-name="G-Man">
 <extension point="xbmc.addon.repository" name="G-Sport Repository">
     <dir>
         <info compressed="false">https://github.com/mrgsi/repository.gsports/raw/master/addons.xml</info>
@@ -17,11 +17,6 @@
         <checksum>https://github.com/mrgsi/repository.alpha.yt/raw/master/addons.xml.md5</checksum>
         <datadir zip="true">https://raw.githubusercontent.com/mrgsi/repository.alpha.yt/master/</datadir>
     </dir> 
-    <dir>
-		<info compressed="false">https://mullafabz.xyz/Plugins/K19/Plugins/addons.xml</info>
-		<checksum>https://mullafabz.xyz/Plugins/K19/Plugins/addons.xml.md5</checksum>
-		<datadir zip="true">https://mullafabz.xyz/Plugins/K19/Plugins/</datadir>
-	</dir>
 	<dir>
 		<info compressed="false">https://raw.githubusercontent.com/Gujal00/smrzips/master/addons.xml</info>
 		<checksum>https://raw.githubusercontent.com/Gujal00/smrzips/master/addons.xml.md5</checksum>
@@ -195,6 +190,19 @@
     <email></email>
   </extension>
 </addon>
+    
+<addon id="script.j1.artwork" name="J1 Artwork" provider-name="J1" version="2.3.7">
+    <extension point="xbmc.python.module" library="lib"/>
+    <extension point="xbmc.addon.metadata">
+        <description lan="en">J1 Artwork, Helper Modules</description>
+        <summary lang="en">J1 Artwork, Common Functions.</summary>
+        <disclaimer lang="en">The author is not responsible for the use of this addon. The author is not responsible for the content found using this addon. The author does not host or own any content found within this addon.[CR]The author is in no way affiliated with Kodi, Team Kodi, or the XBMC Foundation.[CR]This is a Non-profit resource, organized solely for educational purposes which is protected under the Fair-Use doctrine of the Copyright Act, Specifically section 107, which does promote freedom of expression, by permitting the unlicensed use of copyright-protected works.</disclaimer>
+        <platform>all</platform>
+        <assets>
+            <icon>icon.png</icon>
+        </assets>
+    </extension>
+</addon>
 
 <addon id="plugin.video.watchwrestling" name="Watch Wrestling" version="1.8.0" provider-name="G-Man">
     <requires>
@@ -271,6 +279,167 @@
 		<icon>icon.png</icon>
 		<fanart>fanart.jpg</fanart>
   </assets>
+  </extension>
+</addon>
+    
+<addon id="script.module.tzdata" name="tzdata" version="2023.3.0+matrix.1" provider-name="Python Software Foundation">
+  <requires>
+    <import addon="xbmc.python" version="3.0.0" />
+  </requires>
+  <extension point="xbmc.python.module" library="lib" />
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en_GB">Provider of IANA time zone data</summary>
+    <description lang="en_GB">This is a Python package containing zic-compiled binaries for the IANA time zone database. It is intended to be a fallback for systems that do not have system time zone data installed</description>
+    <platform>all</platform>
+    <license>Apache-2.0</license>
+    <website>https://pypi.org/project/tzdata/</website>
+    <source>https://github.com/python/tzdata</source>
+    <assets>
+      <icon>resources/icon.png</icon>
+    </assets>
+  </extension>
+</addon>
+    
+<addon id="script.module.tzlocal" name="tzlocal" version="5.0.1" provider-name="Lennart Regebro">
+  <requires>
+    <import addon="xbmc.python" version="3.0.0" />
+    <import addon="script.module.tzdata" version="2023.3.0+matrix.1" />
+    <import addon="script.module.backports.zoneinfo" version="0.2.1" />
+  </requires>
+  <extension point="xbmc.python.module" library="lib" />
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en_GB">tzinfo object for the local timezone</summary>
+    <description lang="en_GB">tzinfo object for the local timezone</description>
+    <platform>all</platform>
+    <license>MIT</license>
+    <website>https://github.com/regebro/tzlocal</website>
+    <source>https://github.com/regebro/tzlocal</source>
+    <assets>
+      <icon>resources/icon.png</icon>
+    </assets>
+  </extension>
+</addon>
+    
+<addon id="plugin.video.XGames"
+	name="[COLOR red]X Games[/COLOR]"
+	version="1.0.9"
+	provider-name="[I][COLOR red]Rock[/COLOR][/I]">
+  <requires>
+    <import addon="xbmc.python" version="3.0.0"/>
+    <import addon="script.module.simplejson"/>
+    <import addon="script.module.resolveurl"/>
+    <import addon="inputstream.adaptive"/>
+    <import addon="plugin.video.youtube" optional="true" />
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">X Games on YouTube</summary>
+    <description lang="en">All video contained within this add-on is scraped from youtube Channels and is not hosted in any way by the author.</description>
+    <platform>all</platform>
+    <assets>
+    <icon>icon.png</icon>
+    <fanart>fanart.jpg</fanart>
+    </assets>
+  </extension>
+</addon>
+    
+<addon id="plugin.video.AllSportzRecaps"
+	name="[COLOR red]Strike's AllSportz Recaps[/COLOR]"
+	version="1.0.7"
+	provider-name="Strike">
+  <requires>
+    <import addon="xbmc.python" version="3.0.0"/>
+    <import addon="script.module.simplejson"/>
+    <import addon="script.module.resolveurl"/>
+    <import addon="inputstream.adaptive"/>
+    <import addon="plugin.video.youtube" optional="true" />
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">Strikes YouTube Sports Playlists</summary>
+    <description lang="en">All video contained within this add-on is scraped from youtube Channels and is not hosted in any way by the author.</description>
+    <platform>all</platform>
+    <assets>
+    <icon>icon.png</icon>
+    <fanart>fanart.jpg</fanart>
+    </assets>
+  </extension>
+</addon>
+
+<addon id="plugin.video.sportz" name="Sportz" version="1.2.7" provider-name="J1">
+	<requires>
+		<import addon="script.j1.artwork" />
+	</requires>
+	<extension point="xbmc.python.pluginsource" library="default.py">
+		<provides>video</provides>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Sports Channels, Wrestling, Football, and more. K19 compatible.</summary>
+		<description lang="en">Sports Channels, Wrestling, Football, and more. K19 compatible. Special Thanks to Uncle Touchy for original templates. Adapted for your pleasure by J1.</description>
+        <disclaimer lang="en">The author is not responsible for the use of this addon. The author is not responsible for the content found using this addon. The author does not host or own any content found within this addon.[CR]The author is in no way affiliated with Kodi, Team Kodi, or the XBMC Foundation.[CR]This is a Non-profit resource, organized solely for educational purposes which is protected under the Fair-Use doctrine of the Copyright Act, Specifically section 107, which does promote freedom of expression, by permitting the unlicensed use of copyright-protected works.</disclaimer>
+		<platform>all</platform>
+		<news></news>
+		<genre>All</genre>
+		<video_guide></video_guide>
+		<video_preview></video_preview>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>			
+        </assets>
+	</extension>
+</addon>
+
+<addon id="plugin.video.SkuffTV"
+	name="[COLOR magenta]Skuff TV[/COLOR]"
+	version="1.0.5"
+	provider-name="[COLOR magenta]Dreamweaver[/COLOR]">
+  <requires>
+    <import addon="xbmc.python" version="3.0.0"/>
+    <import addon="script.module.simplejson"/>
+    <import addon="script.module.resolveurl"/>
+    <import addon="inputstream.adaptive"/>
+    <import addon="plugin.video.youtube" optional="true" />
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">Skuff TV on YouTube</summary>
+    <description lang="en">All video contained within this add-on is scraped from youtube Channels and is not hosted in any way by the author.</description>
+    <platform>all</platform>
+    <assets>
+    <icon>icon.png</icon>
+    <fanart>fanart.jpg</fanart>
+    </assets>
+  </extension>
+</addon>
+    
+<addon id="plugin.video.FightTube"
+	name="[COLOR red]Fight[COLOR silver]Tube[/COLOR]"
+	version="1.0.6"
+	provider-name="[I][COLOR red]Rock[/COLOR][/I]">
+  <requires>
+    <import addon="xbmc.python" version="3.0.0"/>
+    <import addon="script.module.resolveurl"/>
+    <import addon="script.module.simplejson"/>
+    <import addon="inputstream.adaptive"/>
+    <import addon="plugin.video.youtube" optional="true" />
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">Mixed fighting on YouTube</summary>
+    <description lang="en">All video contained within this add-on is scraped from youtube Channels and is not hosted in any way by the author.</description>
+    <platform>all</platform>
+	<assets>
+    <icon>icon.png</icon>
+    <fanart>fanart.jpg</fanart>
+    </assets>
   </extension>
 </addon>
     
