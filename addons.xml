@@ -320,7 +320,7 @@
   </extension>
 </addon>
     
-<addon id="script.module.jetextractors" name="JetExtractors" version="2.0.87" provider-name="THE TEAM">
+<addon id="script.module.jetextractors" name="JetExtractors" version="2.0.87.b" provider-name="THE TEAM">
 	<requires>
 		<import addon="script.module.requests" />
 		<import addon="script.module.beautifulsoup4" />
