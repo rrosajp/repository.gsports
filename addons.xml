@@ -253,7 +253,7 @@
   </extension>
 </addon>
     
-<addon id="plugin.video.torquelite" name="[COLORlime]Torque Lite[/COLOR]" version="9.5" provider-name="RacesonDemand">
+<addon id="plugin.video.torquelite" name="[COLORlime]Torque Lite[/COLOR]" version="9.7" provider-name="RacesonDemand">
   <requires>
     <import addon="xbmc.python" version="3.0.0" />
     <import addon="script.module.requests" />
@@ -320,7 +320,7 @@
   </extension>
 </addon>
     
-<addon id="script.module.jetextractors" name="JetExtractors" version="2.0.87.b" provider-name="THE TEAM">
+<addon id="script.module.jetextractors" name="JetExtractors" version="2.0.88" provider-name="THE TEAM">
 	<requires>
 		<import addon="script.module.requests" />
 		<import addon="script.module.beautifulsoup4" />
