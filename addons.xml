@@ -204,7 +204,7 @@
     </extension>
 </addon>
 
-<addon id="plugin.video.watchwrestling" name="Watch Wrestling" version="1.8.0" provider-name="G-Man">
+<addon id="plugin.video.watchwrestling" name="Watch Wrestling" version="1.8.1" provider-name="Old Salt">
     <requires>
         <import addon="xbmc.python" version="3.0.0" />
         <import addon="script.module.requests" />
@@ -215,7 +215,7 @@
         <provides>video</provides>
     </extension>
     <extension point="xbmc.addon.metadata">
-        <description lang="en">Watch Wrestling from WWE to UFC[CR]All coding by mbebe, small mods by G-Man</description>
+        <description lang="en">Watch Wrestling from WWE to UFC[CR]Original coding by mbebe forked with minor adjustments and new graphics.</description>
         <disclaimer lang="en">https://watchwrestling.ae/</disclaimer>	
         <summary lang="en">WWE and MMA Wrestling</summary>
         <language>en</language>
